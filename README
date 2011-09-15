@@ -42,7 +42,7 @@ $.checkdom({
     // ie., exclude: '#gmap, #colorpicker' (also exclude all children of that element)
     exclude: '',
     
-    // Attach overlays and message to each element instead of document. 
+    // Attach overlays and messages to each element instead of document body 
     // Good for pages with lots of dynamic elements ** VERY BUGGY **
     attachElement: false 
 });
