@@ -38,10 +38,11 @@ $.checkdom({
     // Show errors on page load without pressing 'e' or click the button
     auto: false, 
     
-    // Elements to exclude -- ex., Google Maps or other library generated elements (also exclude all children of that element)
-    // ie., exclude: '#gmap, #colorpicker'
+    // Elements to exclude -- ex., Google Maps or other library generated elements 
+    // ie., exclude: '#gmap, #colorpicker' (also exclude all children of that element)
     exclude: '',
     
-    // Attach overlays and message to each element instead of document. Good for pages with lots of dynamic elements ** VERY BUGGY **
+    // Attach overlays and message to each element instead of document. 
+    // Good for pages with lots of dynamic elements ** VERY BUGGY **
     attachElement: false 
 });
