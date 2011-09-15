@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+<meta charset='utf-8'>
 
-  <title>nblue/CheckDom @ GitHub</title>
+<title>nblue/CheckDom @ GitHub</title>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #ffffff;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #000000; }
-    h3 { text-align: center; color: #000000; }
-    a { color: #000000; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+<style type="text/css">
+body {
+  margin-top: 1.0em;
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+  color: #000000;
+}
+#container {
+  margin: 0 auto;
+  width: 850px;
+}
+h1 { font-size: 2em; color: #000000; margin-bottom: 3px; }
+h1 .small { font-size: 0.4em; }
+h2 { font-size: 2em; }
+h1 a { text-decoration: none }
+h3 { font-size: 1.5em; color: #2b9ad6; }
+a { color: #000000; }
+.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+.download { float: right; }
+pre { background: #000; color: #fff; padding: 15px;}
+hr { margin: 20px 0; border: 0; width: 100%; border-bottom: 1px solid #aaa; clear:both;}
+.footer { text-align:center; padding-top:30px; font-style: italic; }
+#bookmarklet{
+    padding: 4px 8px;
+    line-height: 1.5em;
+    background: #CCC;
+    border-radius: 3px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    font-size: .875em;
+}
+.dupeid{
+    width:200px;
+    height: 100px;
+    margin: 10px 10px 20px 0;
+    padding: 5px;
+    background: #EEE;
+    border: 1px solid #CCC;
+    float: left;
+}
+.imgtest{
+    margin: 10px 10px 0 0;
+    
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
+<script src="checkdom.jquery.js" type="text/javascript"></script> 
+<script>
+$(window).load(function(){
+    $.checkdom();
+});
+</script>
 </head>
 
 <body>
   <a href="http://github.com/nblue/CheckDom"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
   <div id="container">
-
+    
     <div class="download">
       <a href="http://github.com/nblue/CheckDom/zipball/master">
         <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
@@ -42,32 +72,76 @@
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="http://github.com/nblue/CheckDom">CheckDom</a>
-      <span class="small">by <a href="http://github.com/nblue">nblue</a></span></h1>
+    <h2><a href="http://github.com/nblue/CheckDom">CheckDom</a>
+      <span class="small">by <a href="http://github.com/nblue">nblue</a></span></h2>
 
     <div class="description">
       Basic pre-launch check your HTML code
     </div>
-
-    <h2>Authors</h2>
-<p>Nice<br/>      </p>
-<h2>Contact</h2>
-<p> (nice@u-blue.com)<br/>      </p>
-
-
-    <h2>Download</h2>
+<hr/>
+    <h3>Download</h3>
     <p>
       You can download this project in either
       <a href="http://github.com/nblue/CheckDom/zipball/master">zip</a> or
       <a href="http://github.com/nblue/CheckDom/tarball/master">tar</a> formats.
     </p>
+    <hr/>
+    <h3>Bookmarklet</h3> 
+<a title="Bookmarklet" id="bookmarklet" href="javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a.createElement(&quot;script&quot;);c.type=&quot;text/javascript&quot;;c.src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/&quot;+g+&quot;/jquery.min.js&quot;;c.onload=c.onreadystatechange=function(){if(!b&&(!(d=this.readyState)||d==&quot;loaded&quot;||d==&quot;complete&quot;)){h((f=e.jQuery).noConflict(1),b=1);f(c).remove()}};a.documentElement.childNodes[0].appendChild(c)}})(window,document,&quot;1.6.4&quot;,function($,L){s=document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='http://nblue.github.com/CheckDom/j.js';});">CheckDom</a> <small>(Drag to browser's bookmark bar)</small>
+
+<hr/>
+
+<h2>Examples: </h2>
+
+<h3>DIVs with duplicated ID</h3>
+
+<div class="dupeid" id="spartacus">I am Spartacus!</div>
+
+<div class="dupeid" id="spartacus">No! I'm Spartacus!</div>
+
+<hr/>
+
+<h3>A Tags with&amp;without title</h3>
+
+<ul>
+    <li><a href="#">I have no title</a></li>
+    <li><a href="#" title="Title">Me haz title</a></li>
+</ul>
+
+<hr/>
+
+<h3>Deprecated Tags&amp;Attributes</h3>
+
+<ul>
+    <li><font face="Comic Sans MS">I am in a FONT tag with face attribute</font></li>
+    <li><u>I am in U tag</u></li>
+    <li><a href="#" title="vlink" vlink="black">I have vlink attribute</a></li>
+</ul>
+
+<hr/>
+
+<h3>IMG Tags with&amp;without alt/dimension</h3>
+
+<img src="img/all.png" alt="all"  width="352" height="302" class="imgtest" />
+<img src="img/alt.png" alt="alt" class="imgtest" /><br/>
+<img src="img/hw.png" width="352" height="302" class="imgtest" />
+<img src="img/nono.png" class="imgtest" />
+
+<hr/>
+
+<h3>Two H1 tags</h3>
+
+<h1>H1: Me first</h1>
+<h1>H1: No! Me first!</h1>
+
+<hr/>
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/nblue/CheckDom">nblue/CheckDom</a>
+          
     <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
       by running:
       <pre>$ git clone git://github.com/nblue/CheckDom</pre>
     </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/nblue/CheckDom">nblue/CheckDom</a>
     </div>
 
   </div>
