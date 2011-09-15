@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style>
+body{
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 20px;
+}
+#bookmarklet{
+    padding: 4px 8px;
+    line-height: 1.5em;
+    background: #CCC;
+    border-radius: 3px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    font-size: .875em;
+}
+.dupeid{
+    width:200px;
+    height: 100px;
+    margin: 10px 10px 20px 0;
+    padding: 5px;
+    background: #EEE;
+    border: 1px solid #CCC;
+    float: left;
+}
+.imgtest{
+    margin: 10px 10px 0 0;
+    
+}
+hr{
+    clear: both;
+    margin: 10px 0;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script> 
+<script src="checkdom.jquery.js" type="text/javascript"></script> 
+<script>
+$(window).load(function(){
+    $.checkdom();
+});
+</script>
+</head>
+<body>
+
+<h2>DIVs with duplicated ID</h2>
+
+<div class="dupeid" id="spartacus">I am Spartacus!</div>
+
+<div class="dupeid" id="spartacus">No! I'm Spartacus!</div>
+
+<hr/>
+
+<h2>A Tags with&amp;without title</h2>
+
+<ul>
+    <li><a href="#">I have no title</a></li>
+    <li><a href="#" title="Title">Me haz title</a></li>
+</ul>
+
+<hr/>
+
+<h2>Deprecated Tags&amp;Attributes</h2>
+
+<ul>
+    <li><font face="Comic Sans MS">I am in a FONT tag with face attribute</font></li>
+    <li><u>I am in U tag</u></li>
+    <li><a href="#" title="vlink" vlink="black">I have vlink attribute</a></li>
+</ul>
+
+<hr/>
+
+<h2>IMG Tags with&amp;without alt/dimension</h2>
+
+<img src="img/all.png" alt="all"  width="352" height="302" class="imgtest" />
+<img src="img/alt.png" alt="alt" class="imgtest" /><br/>
+<img src="img/hw.png" width="352" height="302" class="imgtest" />
+<img src="img/nono.png" class="imgtest" />
+
+<hr/>
+
+<h2>Two H1 tags</h2>
+
+<h1>H1: Me first</h1>
+<h1>H1: No! Me first!</h1>
+
+</body>
+</html>
