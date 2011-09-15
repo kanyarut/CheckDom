@@ -1,0 +1,47 @@
+Display errors and warnings in HTML code including:
+
+Errors:
+- Duplicate ID
+- IMG Tags ALT
+- H1 more than 1 tag
+
+Warnings:
+- A Tags Title
+- IMG Tags no W/H
+- H2 more than 5 tags
+- H3 more than 10 tags
+- Deprecated Tags
+- Deprecated Attributes
+
+=====
+
+Usage:
+
+Require jQuery 1.6+
+
+Include Script
+
+<script src="checkdom.jquery.js" type="text/javascript"></script> 
+<script>
+$(window).load(function(){
+    $.checkdom();
+});
+</script>
+
+In web page, press 'e' or click on white dot in a black box (top left of the page) to display errors and warning.
+
+=====
+
+Options:
+
+$.checkdom({ 
+    // Show errors on page load without pressing 'e' or click the button
+    auto: false, 
+    
+    // Elements to exclude -- ex., Google Maps or other library generated elements (also exclude all children of that element)
+    // ie., exclude: '#gmap, #colorpicker'
+    exclude: '',
+    
+    // Attach overlays and message to each element instead of document. Good for pages with lots of dynamic elements ** VERY BUGGY **
+    attachElement: false 
+});
